@@ -1383,7 +1383,21 @@
 "avedon review ron howards thrilling documentary about richard avedon the great photographer who turned headon portraits into an art form": 1794177929,
 "the beatles white album various artists musicians covers": 1794177929,
 "paul mccartney new 2026 album the boys of dungeon lane": 1794177929,
-"post here your personal elvis and your personal beatles": 1794177929
+"post here your personal elvis and your personal beatles": 1794177929,
+"https://news.google.com/rss/articles/CBMihgFBVV95cUxPTGZsblhISUotUnFBXzhZcEIzeUtKRTBpQkEtTUcyVkRQcXpLeFE5UVAwRi1TOTlFc1psM1k5QXB0UnpDdlk0bDRKX3QtWUdwQzhVanIzYUVuN3dhZXdJc1h6WklKbTVNeG9Vcnozd1oyU1NrUV83ZExNLWdENFBVVjhzb2xtdw?oc=5": 1794191062,
+"letrux conta detalhes sobre família composta por namorado namorada e filha": 1794191062,
+"culpable o inocente el machismo detrás del mito de yoko ono y los beatles": 1794191062,
+"paul mccartney with his mother mary and brother mike": 1794191062,
+"ringo starr biografía bandas discos y más": 1794191062,
+"i have wanted to do this for years": 1794191062,
+"novemberno musicchallenge day 9 nono song ringo starr youtubefizgjyhxbky": 1794191062,
+"quer tocar early days de paul mccartney a cifra está no cifranet cifra completa com acordes e tom para acompanhar no violão httpswwwcifranetcombrcifraearlydayspaulmccartney340942utmsourceblueskyutmmediumsocialutmcampaigncifranetorganico cifranet cifras": 1794191062,
+"why is it so hard for some beatles fans to admit john is their favorite": 1794191062,
+"if lennon lived and they played at live aid who wouldve been bigger queen or beatles": 1794191062,
+"wwwyoutubecomwatchvndva george harrison wah wah wwwyoutubecomwatchv3jcg bullmark interstate 76 wwwyoutubecomwatchveubg the smiths the queen is dead wwwyoutubecomwatchvcu5 britney spears baby one more time wwwyoutubecomwatchvetyr blake babies on": 1794191062,
+"breaking up 1966": 1794191062,
+"rolling stone cumple 59 años como referente de la música y la cultura": 1794191062,
+"paul has some serious character development in those two years": 1794191062
 },
 "seeded": [
 "Google News (PT)",
@@ -1434,6 +1448,23 @@
 "YouTube: Ringo Starr"
 ],
 "pending": [],
-"last_digest": 1794177929.4653618,
-"failing": {}
+"last_digest": 1794191062.6243286,
+"failing": {
+"YouTube: The Beatles": {
+"since": 1794191062,
+"alerted": false
+},
+"YouTube: Paul McCartney": {
+"since": 1794191062,
+"alerted": false
+},
+"YouTube: John Lennon": {
+"since": 1794191062,
+"alerted": false
+},
+"YouTube: Ringo Starr": {
+"since": 1794191062,
+"alerted": false
+}
+}
 }
