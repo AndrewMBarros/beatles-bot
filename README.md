@@ -5,23 +5,25 @@
 
 # Beatles Bot
 
-Monitora notícias, redes sociais e fóruns sobre os Beatles e os quatro integrantes e avisa no Telegram.
+[🇧🇷 Versão em Português](README.pt-BR.md)
 
-- **Na hora:** Google News e Bing News (só com o nome no título), The Guardian, sites de música, sites oficiais e YouTube.
-- **No resumo (de hora em hora):** Reddit, Steve Hoffman Forums, Mastodon, Bluesky e resultados de busca que só citam o nome no texto.
+Monitors news, social networks and forums about the Beatles and its four members, and sends alerts to Telegram.
 
-Quando uma fonte entra pela primeira vez, o que já existe nela é gravado sem enviar mensagens. Se ela ficar 24h fora do ar, o bot avisa no Telegram.
+- **Instantly:** Google News and Bing News (name in the title only), The Guardian, music sites, official sites and YouTube.
+- **In the hourly digest:** Reddit, Steve Hoffman Forums, Mastodon, Bluesky and search results that only mention the name in the text.
 
-## ✨ Destaques técnicos
+When a source is added for the first time, its existing items are recorded without sending messages. If a source stays down for 24 hours, the bot sends an alert to Telegram.
 
-- **46 fontes** (feeds RSS/Atom e a API do Bluesky), de portais de notícias a fóruns de fãs.
-- **Anti-duplicação:** histórico em `seen.json` e comparação de títulos parecidos, para a mesma notícia publicada por vários sites chegar uma vez só.
-- **Envio resiliente:** separa erros passageiros (tenta de novo na próxima execução) de mensagens que o Telegram nunca aceitaria, e limita os envios por execução.
-- **Monitoramento das fontes:** alerta no Telegram quando uma fonte fica 24h fora do ar.
-- **Testes automatizados** com `unittest` e modo `--dry-run` para conferir sem enviar nada.
-- **Dois modos de execução:** loop contínuo no Railway ou agendamento no GitHub Actions.
+## ✨ Technical highlights
 
-## Testar no computador
+- **46 sources** (RSS/Atom feeds and the Bluesky API), from news portals to fan forums.
+- **Deduplication:** history in `seen.json` plus similar-title matching, so the same story published by several sites arrives only once.
+- **Resilient delivery:** separates transient errors (retried on the next run) from messages Telegram would never accept, and caps the number of sends per run.
+- **Source health monitoring:** Telegram alert when a source has been down for 24 hours.
+- **Automated tests** with `unittest`, plus a `--dry-run` mode to check output without sending anything.
+- **Two run modes:** continuous loop on Railway or scheduled runs on GitHub Actions.
+
+## Run locally
 
 ```bash
 pip install -r requirements.txt
@@ -29,29 +31,29 @@ python -m unittest test_beatles_news
 python beatles_news.py --dry-run
 ```
 
-`--dry-run` mostra o que seria enviado das últimas 6 horas, sem enviar nem gravar nada.
+`--dry-run` shows what would have been sent in the last 6 hours, without sending or saving anything.
 
-Para enviar de verdade, copie `.env.example` para `.env` e preencha `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID`.
+To send for real, copy `.env.example` to `.env` and fill in `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`.
 
-## Onde rodar
+## Where to run
 
-Use só um dos dois: com ambos ligados no mesmo chat, cada notícia chega duas vezes.
+Pick only one: with both enabled on the same chat, every story arrives twice.
 
-### Railway (a cada 1 minuto)
+### Railway (every minute)
 
-1. Crie o projeto a partir do repositório. O `Procfile` já roda `python beatles_news.py --loop`.
-2. Em Variables, defina `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` e `SEEN_FILE=/data/seen.json`.
-3. Crie um volume montado em `/data`, para o histórico sobreviver aos reinícios.
-4. Desative o workflow no GitHub (aba Actions).
+1. Create the project from the repository. The `Procfile` already runs `python beatles_news.py --loop`.
+2. Under Variables, set `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` and `SEEN_FILE=/data/seen.json`.
+3. Create a volume mounted at `/data`, so the history survives restarts.
+4. Disable the workflow on GitHub (Actions tab).
 
-### GitHub Actions (a cada 15 minutos ou mais)
+### GitHub Actions (every 15 minutes or more)
 
-Já configurado em `.github/workflows/beatles-news.yml`. Defina os Secrets `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID`.
+Already configured in `.github/workflows/beatles-news.yml`. Set the `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` secrets.
 
-## 🛠 Tecnologias
+## 🛠 Tech stack
 
 Python · requests · feedparser · python-dotenv · Telegram Bot API · GitHub Actions · Railway
 
-## 👤 Autor
+## 👤 Author
 
 **Andrew Matheus** — [LinkedIn](https://www.linkedin.com/in/andrewmbs/) · [GitHub](https://github.com/AndrewMBarros)
